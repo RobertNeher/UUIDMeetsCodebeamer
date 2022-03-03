@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Dart (bin\\uuid_meets_codebeamer.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "bin\\uuid_meets_codebeamer.dart"
+        },
+        {
+            "name": "Dart (bin\\main.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "bin\\main.dart",
+            "args": ["13188"]
+        },
+        {
+            "name": "Dart (API Service)",
+            "type": "dart",
+            "request": "launch",
+            "program": "bin\\rest_api\\server.dart",
+        }
+    ]
+}
