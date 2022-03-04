@@ -22,9 +22,10 @@ void main(List<String> arguments) async {
   final Db mappingDB = await Db.create(DBMappingServer);
   await mappingDB.open();
   await mappingDB.drop();
-  final DbCollection mappingCollection = mappingDB.collection('Mapping');
-  // mappingCollection.createIndex(keys: {'type': 1}, );
-  // mappingCollection.createIndex(keys: {'itemID': 1});
+  final DbCollection mappingCollection =
+      mappingDB.collection(DBMappingCollection);
+  mappingCollection.createIndex(keys: {'type': 1});
+  mappingCollection.createIndex(keys: {'itemID': 1});
 
   // get all projects
   projects = await getProjects();

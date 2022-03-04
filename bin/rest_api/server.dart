@@ -8,7 +8,7 @@ import './controllers/cb_uuid_controller.dart';
 void main(List<String> args) async {
   Db mappingDB = await Db(DBMappingServer);
   await mappingDB.open();
-  DbCollection mappingCollection = DbCollection(mappingDB, 'Mapping');
+  DbCollection mappingCollection = DbCollection(mappingDB, DBMappingCollection);
 
   final app = Router();
 
