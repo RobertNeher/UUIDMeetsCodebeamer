@@ -26,6 +26,9 @@ DBMappingServer = 'mongodb://localhost:27017/CodebeamerUUIDMapping': Database ke
 DBMappingCollection = 'Mapping': The name of the collecction keeping all data.
 
 CB_UUIDWebServiceServer = 'localhost': URL and port für web service to retrieve data from mapping database
+DBMappingServer = 'mongodb://localhost:27017/CodebeamerUUIDMapping': Database keeping mapping data. WARNING: Collection name "Mapping" is hard coded!
+
+CB_UUIDWebServiceServer = 'localhost': URL and port für web service to retrieve data from mapping database
 CB_UUIDWebServicePort = 4712
 
 *Start data collection and add UUIDs*
@@ -41,12 +44,12 @@ Start root app with: _dart run .\bin\rest_api\server.dart_
 The URL tokens:
 
 <URL:Port>/uuid/<UUID>: retrieve item data by UUID
-
 <URL:Port>/id/<ObjectID>: retrieve item data by Object ID (by MongoDB)
 
 <URL:Port>/itemID/<ItemID>: retreive item data by ItemID
 
 The returned document has this format:
+
 {
 
   "type": "[Project|Tracker|Work Item|Wiki|Attachment]" (String)
@@ -56,5 +59,4 @@ The returned document has this format:
   "uuid": the unique ID across entire codebeamer server (String)
 
 }
-
 ----- **** -----
